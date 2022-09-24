@@ -1,0 +1,152 @@
+/* SELECTORES */
+/* 
+    Selectores Simples
+        Selectores Elementales
+            Selector Universal -> *
+            Selector de tipo o etiqueta -> Nombre de la etiqueta
+        Selectores de Atributo
+            id -> id del elemento
+            clase -> clase del elemento
+                class
+            otros atributos
+                [atributo]
+                [atributo=valor]
+                [atributo^=valor]
+                [atributo*=valor]
+                [atributo$=valor]
+    Selectores Compuestos
+        Selectores Agrupados
+            Se agrega un " , ". Para seleccionar mas de un atributo
+        Selectores Combinados
+            Selector Desendiente
+            Selector de Hermano Siguiente
+        Pseudoclases - Pseudoelementos
+*/
+
+/* SELECTORES ELEMENTALES */
+
+/* Ejemplo de Selector Universal */
+    * {
+        background-color : black;
+    }
+
+/* Ejemplo de Selector de Etiqueta */
+    body {
+        background-color : black;
+    }
+
+/* SELECTORES DE ATRIBUTO */
+
+/* Ejemplo de selector ID */
+/* Nota: Para poder seleccionar un id de algun elemento, se debe de agregar primero el # */
+
+/* No es recomendable utilizar el ID como selector, porque es unico, y eso se utiliza mas para utilizarlo en JavaScript, lo que css requiere es reutilizar los estilos, por eso es mejor optar por las clases */
+
+#title{
+    background-color: aqua;
+}
+
+/* Ejemplo de Selector de Clases */
+/* Nota: Para poder seleccionar una clases, es necesario agregar " . " antes de la clase deseada */
+.title{
+    background-color: black;
+}
+
+/* Ejemplo de otros atributos */
+/* Nota: No es recomendado, se utilizara  en ciertas ocasiones cuando no hay otra forma de dar un estilo a cierto atributo */
+
+[href] {
+    /* En este ejemplo, solo se le dara estilo a este atributo */
+    background-color: black;
+}
+
+/* Otro ejemplo */
+
+[href="link"] {
+    /* Para que se de el estilos, es necesario que exista una coincidencia con el contenido que se encuentra dentro el atributo */
+    background-color: #000;
+}
+/* Otro ejemplo */
+
+[href^="ejemplo"] {
+    /* Se dara el estilo, siempre y cuando el valor del atributo empieze con lo descrito anteriormente */
+    background-color: #fff;
+}
+
+/* Otro ejemplo */
+[href*="ejemplo"] {
+    /* Se dara el estilo, cuando se cumpla con la condicion, es decir, que encuentre la palabra, no importa si esta al inico, en medio o al final del atributo */
+}
+
+/* Otro ejemplo */
+[href$="ejemplo"] {
+    /* Se dara el estilo cuando se encuentre la palabra al final del valor del atributo */
+    background-color: #fff;
+}
+
+/* SELECTORES AGRUPADOS */
+/* 
+    Los selectores agrupados son de gran utilidad cuando se requiere reutilizar codigo de otras clases, es decir, anidar dos o mas clases en un mismo  selector.
+
+    EJEMPLO
+*/
+
+.text,
+.text-2,
+.text-3,
+.text-4 {
+    /* La funcion principal de los selectores agrupados es reducir las lineas de codigo siempre y cuando se quiera dar un mismo estilos a las clases seleccionadas */
+    background-color: #fff;
+}
+
+/* SELECTORES DESENDIENTES */
+/* 
+    Los selectores desendientes sirve para seleccionar hijos, es decir, cuando se agrega una misma clase en diferentes atributo, pero solo se requiere dar estilo a un solo atributo en particular se necesita implementr el selector desendiente. Esto con la finalidad de especificar al padre, es decir, al atributo principal.
+
+    EJEMPLO
+*/
+div .text {
+    /* Como se observa, se declaro primero al padre, y despues a la clase hijo que se le requiere dar un estilo en especifico*/
+    background-color: #fff;
+}
+
+/* SELECTOR DE HERMANO SIGUIENTE */
+/* 
+    Nota: Los atributos que se consideran hermanos, son cuando estan al mismo nivel en la estructura del HTML
+    Nota: Los atributos padres, son los que contienen atributos dentro del mismo
+
+    Nota: Hay atributos que no son hereditarios, como ejemplo tenemos al link, "href", esto porque necesita ser diferenciada de lo demas. En caso que se desea que se le agrege la herencia a pesar de esto, se le debe de agregar un valor a la propiedad,  la cual es "inherit".
+
+    .text {
+        color: inherit;
+    }
+
+    Nota: Hay ocasiones cuando se hace una herencia a los hijos o hermanos de una etiqueta, en la que no se desea que se herede las propiedades del padre o del hermano, para evitar esto, se debe ingresar el valor de "initial".
+
+    .text {
+        color : initial;
+    }
+
+    EJEMPLO
+*/
+.text + .text-2 {
+    /* Nota: Para poder seleccionar el hermano siguiente, el cual se desea agregarle estilos, se debe de utilizar " + " */
+    background-color: #fff;
+}
+
+/* Es necesario saber cuando implementar un selector en especifico u otro, para ello es necesario conocer muy bien las diferencias de cada una de ellas, con esto sera mas facil deducir el selector deseado */
+
+/* SELECTORES DE ESPECIFICIDAD */
+
+/* El selector de especificidad tiene la funcion de colocar los valores a los atributos, todo esto de acuerdo al numero de su especificidad, esto se debe de ser de acuerdo a lo siguiente:
+        Clases : 0,0,1
+        Atributos : 0,1,0
+        Id : 1,0,0
+Donde se tiene un mayor numero de especificidad se le dara prioridad, no importara la cascada, es decir, aunque este al ultimo valor.
+
+Nota: Se puede ignorar la especificidad, al momento de ingresar la funcion "!import", pero no es recomendable realizar esto.
+*/
+
+/* MORMALIZACION EN LOS NAVEGADORES WEB */
+/* Cuando se agrega estilos a una pagina web no siempre se tendra el mismo resultado al momento de visualizarlo en un navegador que en otro, la razon, es porque cada navegador web tiene unos estilos por defecto, para poder solucionar esto, y que todos los navegadores muestren los mismos estilos se tendra que usar el NORMALIZE, la cual se puede obtener desde la pagina oficial de normalize. Para ejecutarlo, solo es cuestion de descargar los estilos y moverlos en la carpeta del proyecto */
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="autor" content="HackCande">
+        <meta name="keywords" content="Programacion, Html">
+        <!-- El mejor metodo para realizar un enlace de un archivo HTML a uno CSS, es mediante la etiqueta "LINK", despues se debe de agregar el atributo "REL", el cual establece la relacion que hay, dentro de este atributo se ingresa "StyleSheet", es decir, hoja de estilos. Una ves realizado esto, se ingresa el atributo "HREF", en donde se ingresara la ruta en donde se localiza el archivo CSS -->
+        <!-- Otro metodo para agregar estilos en una pagina web, es dentro del mismo archivo HTML, en la etiqueta HEAD, en donde se establece la etiqueta "<style></style>. Esto no es recomendable, debido a que un sitio web contiene varias paginas, y para poder agregar estilos se debe de ingresar el codigo css, en cada pagina" -->
+        <!-- Otro metodo es, agregar el estilo en linea, es decir, que en cada etiqueta se agregara el atributo style="" -->
+        <!-- El ultimo metodo es similar al primero, pero tiene una desventaja, la cual es que tarda demasiado en reflejar los cambios realizados en la hoja de estilos. El metodo es agregar la etiqueta  <style></style> dentro de esta, se agrega el atributo @import, de alli solo se agrega la ruta de la hoja de estilos -->
+        <link rel="stylesheet" href="/style.css">
+
+        <style>
+            /* body{
+                background-color: lightcoral;
+            } */
+
+            /* @import url(style.css); */
+
+        </style>
+        <title>Enlace de HTML a CSS</title>
+    </head>
+    <body>
+        <h1>Enlaces</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste adipisci quasi accusantium magni modi nobis, voluptate illum repellendus repellat eligendi tempore fuga quae officiis sed ipsum, error deserunt quidem molestias.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nisi neque saepe maiores pariatur deserunt quibusdam mollitia quas velit dolore quaerat reprehenderit illo eius illum, eaque dolorum? Possimus, similique corrupti?</p>
+    </body>
+</html>

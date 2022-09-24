@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="HackCande">
+        <meta name="description" content="Primera practica de formulario con css">
+        <meta name="keywords" content="programacion, html, css, javascript">
+        <link rel="shortcut icon" href="/img/17060.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Formulario</title>
+    </head>
+    <body>
+        <header>
+            <!-- Header: Es una seccion de contenido en el cual es un apartado donde se debe de agregar logotipo, como tambien un menu de navegacion. -->
+            <h1 class="title">Formulario</h1>
+        </header>
+        <main>
+            <div class="formulario">
+                <form action="" method="post">
+                    <div class="nombrelabel">
+                        <label for="nombre" class="label">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="input">
+                    </div>
+                    <div class="nombrelabel">
+                        <label for="apellido" class="label">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="input">
+                    </div>
+                    <div class="nombrelabel">
+                        <label for="edad" class="label">Edad:</label>
+                        <input type="number" name="edad" id="edad" placeholder="Edad" class="input">
+                    </div>
+                    <div class="nombrelabel">
+                        <label for="descripcion" class="label">Descripcion:</label>
+                        <textarea name="descripcion" id="descripcion" placeholder="Ingresa la descripcion" class="descripcion"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Enviar" class="">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

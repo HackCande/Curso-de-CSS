@@ -1,0 +1,42 @@
+* {
+    box-sizing : border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 20px;
+    color:lightcoral;
+}
+
+.border,
+.outline {
+    background-color: lightgreen;
+    width: 130px;
+    height: 60px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.border {
+    padding: 10px;
+    border: 10px solid lightcoral;
+}
+
+.outline {
+    padding: 20px;
+    outline: 5px solid lightcoral;
+    outline-offset: 10px;
+    border: 5px solid lightseagreen;
+    border-radius: 10px;
+    border-top-right-radius: 20px 30px;
+}

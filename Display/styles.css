@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 20, 20);
+    margin: 0;
+}
+
+.list {
+    margin: 0;
+    background-color: lightcoral; 
+    display: flex;
+    justify-content: space-evenly;
+}
+.link {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title {
+    background-color: lightgreen;
+    /* width: 200px; */
+    height: 70px;
+}
+
+.text-1,
+.text-2 {
+    background-color: lightskyblue;
+    width: 45%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+}
